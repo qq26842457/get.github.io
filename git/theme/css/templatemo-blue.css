@@ -6,11 +6,9 @@ html, body {
   overflow-x:hidden;
   position: relative;
   vertical-align: baseline;
-  cursor: url(../images/cursor.ico),auto;
 }
 a{
 color:#3366CC;
-cursor: url(../images/cursor.ico),auto;  
 }
 
 html {

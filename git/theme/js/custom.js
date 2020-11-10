@@ -10,9 +10,7 @@ $(window).load(function(){
 $(function(){
     jQuery(document).ready(function() {
 		$('body').backstretch([
-	 		 "../theme/images/tm-bg-slide-1.jpg", 
-	 		 "../theme/images/tm-bg-slide-2.jpg",
-			 "../theme/images/tm-bg-slide-3.jpg"
+	 		 "../theme/images/tm-bg-slide-1.jpg"
 	 			], 	{duration: 3200, fade: 1300});
 		});
 })
