@@ -1,8 +1,33 @@
+<?php
+/* Smarty version 3.1.30, created on 2020-11-11 02:45:00
+  from "E:\vblog\git\tpl\index.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5fab502c95cf20_41520223',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a6a28877efdd46a9a8141af21de8340240e58222' => 
+    array (
+      0 => 'E:\\vblog\\git\\tpl\\index.html',
+      1 => 1605062694,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5fab502c95cf20_41520223 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>{{$data["name"]}}</title>
+	<title><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
@@ -29,8 +54,10 @@
 			<div class="col-md-12 col-sm-12">
 				<img src="../theme/images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow">{{$data["name"]}}</h1>
-				<h1 class="white bold shadow">{{$data["email"]}}</h1>
+				<h1 class="tm-title bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</h1>
+				<h1 class="white bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
+</h1>
 			</div>
 		</div>
 	</div>
@@ -41,10 +68,13 @@
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent">{{$data["name"]}}</h3>
-				<h2>{{$data["email"]}}</h2>
+				<h3 class="accent"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</h3>
+				<h2><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
+</h2>
 				<p>
-				{{$data["intro"]}}
+				<?php echo $_smarty_tpl->tpl_vars['data']->value["intro"];?>
+
 				</p>
 				<div class="row">
 					<div class="col-md-offset-8 col-md-4">
@@ -88,7 +118,8 @@
 					<div class="education-content">
 						<h4 class="education-title accent"></h4>
 
-							{{$data["module1"]}}
+							<?php echo $_smarty_tpl->tpl_vars['data']->value["module1"];?>
+
 					</div>
 			</div>
 		</div>
@@ -123,7 +154,8 @@
 				<h2 class="white">职场语录</h2>
 					<div class="experience-content">
 
-						{{$data["module2"]}}
+						<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
+
 					</div>
 			</div>
 		</div>
@@ -151,10 +183,19 @@
 </footer>
 
 <!-- javascript js -->	
-<script src="../theme/js/jquery.js"></script>
-<script src="../theme/js/bootstrap.min.js"></script>	
-<script src="../theme/js/jquery.backstretch.min.js"></script>
-<script src="../theme/js/custom.js"></script>
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/bootstrap.min.js"><?php echo '</script'; ?>
+>	
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.backstretch.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/custom.js"><?php echo '</script'; ?>
+>
 
 </body>
-</html>
+</html><?php }
+}
