@@ -1,44 +1,45 @@
+<?php
+/* Smarty version 3.1.30, created on 2020-11-16 16:44:57
+  from "E:\vblog\git\tpl\article.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5fb23c09b52455_37158010',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '1e288c6d9210c324a2a30948766e5501c81d0f38' => 
+    array (
+      0 => 'E:\\vblog\\git\\tpl\\article.html',
+      1 => 1605516293,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5fb23c09b52455_37158010 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>一个头发浓密的程序员</title>
+	<title><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 
 	<!-- stylesheet css -->
-	<link rel="stylesheet" href="../theme/css/bootstrap.min.css?1">
+	<link rel="stylesheet" href="../theme/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../theme/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../theme/css/templatemo-blue.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-<style>
-#list{
-margin:40px auto;
-	display:block;
-}
-#list li{
-color:#999;
-line-height:24px;
-list-style-type:none;
-}
-#list li a{
-color:#666;
-font-size:20px; 
-text-decoration:none;
-}
-#list li a:hover{
-color:#3366CC;
-}
 
-#list li small{
-float:right;
-color:#999;
-font-size:16px; 
-}
-</style>
 <!-- preloader section -->
 <div class="preloader">
 	<div class="sk-spinner sk-spinner-wordpress">
@@ -53,8 +54,10 @@ font-size:16px;
 			<div class="col-md-12 col-sm-12">
 				<img src="../theme/images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow">一个头发浓密的程序员</h1>
-				<h1 class="white bold shadow"></h1>
+				<h1 class="tm-title bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</h1>
+				<h1 class="white bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
+</h1>
 			</div>
 		</div>
 	</div>
@@ -65,17 +68,17 @@ font-size:16px;
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent">文章列表</h3> 
-				
-				<ul id="list" class="list-group"> 
-				 
-				<li class="list-group-item"><a href="2020-11-10-12-10-27.html">PHP程序员路线发展规划</a><small>2020-11-10&nbsp;12:10:27</small></li>
-					
-				 
-				<li class="list-group-item"><a href="2020-11-16-15-30-31.html">适合自己就是最好的</a><small>2020-11-16&nbsp;15:30:31</small></li>
-					
-				
-				</li>
+				<h3 class="accent"><?php echo $_smarty_tpl->tpl_vars['article']->value["title"];?>
+</h3>
+				<!--<small><?php echo $_smarty_tpl->tpl_vars['article']->value["author"];?>
+ |<?php echo $_smarty_tpl->tpl_vars['article']->value["from"];?>
+ |<?php echo $_smarty_tpl->tpl_vars['article']->value["tag"];?>
+ </small>-->
+				<small></small>
+				<p style="font-size:18px;font-family:微软雅黑;">
+				<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
+
+				</p>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
@@ -126,10 +129,19 @@ font-size:16px;
 </footer>
 
 <!-- javascript js -->	
-<script src="../theme/js/jquery.js"></script>
-<script src="../theme/js/bootstrap.min.js"></script>	
-<script src="../theme/js/jquery.backstretch.min.js"></script>
-<script src="../theme/js/custom.js"></script>
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/bootstrap.min.js"><?php echo '</script'; ?>
+>	
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.backstretch.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/custom.js"><?php echo '</script'; ?>
+>
 
 </body>
-</html>
+</html><?php }
+}

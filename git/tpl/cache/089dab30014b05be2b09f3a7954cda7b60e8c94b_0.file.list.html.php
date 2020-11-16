@@ -1,8 +1,33 @@
+<?php
+/* Smarty version 3.1.30, created on 2020-11-16 17:09:56
+  from "E:\vblog\git\tpl\list.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5fb241e4961203_38674024',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '089dab30014b05be2b09f3a7954cda7b60e8c94b' => 
+    array (
+      0 => 'E:\\vblog\\git\\tpl\\list.html',
+      1 => 1605517793,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5fb241e4961203_38674024 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>一个头发浓密的程序员</title>
+	<title><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
@@ -53,8 +78,10 @@ font-size:16px;
 			<div class="col-md-12 col-sm-12">
 				<img src="../theme/images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow">一个头发浓密的程序员</h1>
-				<h1 class="white bold shadow"></h1>
+				<h1 class="tm-title bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</h1>
+				<h1 class="white bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
+</h1>
 			</div>
 		</div>
 	</div>
@@ -68,13 +95,25 @@ font-size:16px;
 				<h3 class="accent">文章列表</h3> 
 				
 				<ul id="list" class="list-group"> 
-				 
-				<li class="list-group-item"><a href="2020-11-10-12-10-27.html">PHP程序员路线发展规划</a><small>2020-11-10&nbsp;12:10:27</small></li>
+				<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'val');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
+?> 
+				<li class="list-group-item"><a href="<?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
+"><?php echo $_smarty_tpl->tpl_vars['val']->value["title"];?>
+</a><small><?php echo mb_substr($_smarty_tpl->tpl_vars['val']->value["url"],0,10);?>
+&nbsp;<?php echo mb_substr($_smarty_tpl->tpl_vars['val']->value["url"],11,2);?>
+:<?php echo mb_substr($_smarty_tpl->tpl_vars['val']->value["url"],14,2);?>
+:<?php echo mb_substr($_smarty_tpl->tpl_vars['val']->value["url"],17,2);?>
+</small></li>
 					
-				 
-				<li class="list-group-item"><a href="2020-11-16-15-30-31.html">适合自己就是最好的</a><small>2020-11-16&nbsp;15:30:31</small></li>
-					
-				
+				<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 				</li>
 			</div>
 		</div>
@@ -126,10 +165,19 @@ font-size:16px;
 </footer>
 
 <!-- javascript js -->	
-<script src="../theme/js/jquery.js"></script>
-<script src="../theme/js/bootstrap.min.js"></script>	
-<script src="../theme/js/jquery.backstretch.min.js"></script>
-<script src="../theme/js/custom.js"></script>
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/bootstrap.min.js"><?php echo '</script'; ?>
+>	
+<?php echo '<script'; ?>
+ src="../theme/js/jquery.backstretch.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../theme/js/custom.js"><?php echo '</script'; ?>
+>
 
 </body>
-</html>
+</html><?php }
+}

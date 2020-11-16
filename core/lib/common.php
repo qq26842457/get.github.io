@@ -3,9 +3,11 @@ define("CORE",dirname(dirname(__FILE__)));
 define("FILE",dirname(dirname(__FILE__)) . "/data/");
 define("GIT",dirname(dirname(dirname(__FILE__))) . "/git/"); 
 define("SHOWAPP","../../git/app");
+date_default_timezone_set("Asia/Shanghai");
 
 require_once(CORE . "/class/fileCache.class.php");
 require_once(CORE . "/class/mcrypt.class.php");
+
 
 
 function F($model){

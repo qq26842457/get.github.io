@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 
 	<!-- stylesheet css -->
-	<link rel="stylesheet" href="../theme/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../theme/css/bootstrap.min.css?1">
 	<link rel="stylesheet" href="../theme/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../theme/css/templatemo-blue.css">
 </head>
@@ -69,7 +69,7 @@ font-size:16px;
 				
 				<ul id="list" class="list-group"> 
 				{{foreach from = $list item=val}} 
-				<li class="list-group-item"><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["url"]}}</small></li>
+				<li class="list-group-item"><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["url"]|mb_substr:0:10}}&nbsp;{{$val["url"]|mb_substr:11:2}}:{{$val["url"]|mb_substr:14:2}}:{{$val["url"]|mb_substr:17:2}}</small></li>
 					
 				{{/foreach}}
 				</li>
