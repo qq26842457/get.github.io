@@ -26,6 +26,8 @@ function list_(){
 		$list[$k]["url"]=article($v["key"]);
 	}
 	$tpl=T();
+	//µ¹ÐòÅàÑµ krsort ¸ù¾Ý¼üÃûµ¹ÐòÅÅÐò
+    krsort($list);
 	$tpl->assign("data",$data); 
 	$tpl->assign("list",$list); 
 	$tpl->MakeHtmlFile("list.html","list.html");
